@@ -1,0 +1,49 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="backgroung-grad">
+
+    <div class="caixa-login">
+        <form [formGroup]="formularioCadastro" (ngSubmit)="onSubmit()">
+          <ion-list>
+            <ion-item>
+              <ion-label floating>Nome:</ion-label>
+              <ion-input type="text" formControlName="nome">
+              </ion-input>
+            </ion-item>
+            <h6 *ngIf="errorNome" class="error"> {{messageNome}}</h6>
+            <ion-item>
+                <ion-label floating>Sobrenome:</ion-label>
+                <ion-input type="text" formControlName="sobrenome">
+                </ion-input>
+              </ion-item>
+              <h6 *ngIf="errorSobrenome" class="error"> {{messageSobrenome}}</h6>
+              <ion-item>
+                  <ion-label floating>E-mail:</ion-label>
+                  <ion-input type="text" formControlName="email">
+                  </ion-input>
+                </ion-item>
+                <h6 *ngIf="errorEmail" class="error"> {{messageEmail}}</h6>
+                <ion-item>
+                    <ion-label floating>Senha:</ion-label>
+                    <ion-input type="password" formControlName="password">
+                    </ion-input>
+                  </ion-item>
+                  <h6 *ngIf="errorPassword" class="error"> {{messagePassword}}</h6>
+            <ion-item>
+              <ion-label floating>Confirmar Senha:</ion-label>s
+              <ion-input type="password" formControlName="confirmePassword">
+              </ion-input>
+            </ion-item>
+            <h6 *ngIf="errorConfirmePassword" class="error"> {{messageConfirmePassword}}</h6>
+          </ion-list>
+          <button ion-button color="dark" block round type="submit"> Cadastrar</button>
+        </form>
+        <button ion-button color="orange" block outline round> Já Sou Cadastrado</button>
+      </div>
+
+</ion-content>

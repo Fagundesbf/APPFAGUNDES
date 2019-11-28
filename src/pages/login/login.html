@@ -1,0 +1,38 @@
+<ion-content padding class="backgroung-grad">
+    <ion-chip>
+        <ion-avatar>
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <div style="left: 16px;position: relative;">
+            - CONTROLE FINANCEIRO -
+        </div>
+      </ion-chip>
+  <div class="caixa-login">
+    <form [formGroup]="formularioLogin" (ngSubmit)="onSubmit()">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>E-mail:</ion-label>
+          <ion-input type="text" formControlName="email">
+          </ion-input>
+        </ion-item>
+        <h6 *ngIf="errorEmail" class="error"> {{messageEmail}}</h6>
+        <ion-item>
+          <ion-label floating>Senha:</ion-label>
+          <ion-input type="password" formControlName="password">
+          </ion-input>
+        </ion-item>
+        <h6 *ngIf="errorPassword" class="error"> {{messagePassword}}</h6>
+      </ion-list>
+
+      <div class="row">
+        <div class="col-md-12">
+          <ion-list my-3>
+            <ion-label>Recuperar Senha ? </ion-label>
+          </ion-list>
+        </div>
+      </div>
+      <button ion-button color="orange" block round type="submit">Acessar</button>
+    </form>
+    <button ion-button color="dark" block round (click)="goCadastro()">Cadastrar</button>
+  </div>
+</ion-content>

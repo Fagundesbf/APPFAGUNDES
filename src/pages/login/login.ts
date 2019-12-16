@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { CadastroPage } from './../cadastro/cadastro';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -65,6 +66,8 @@ export class LoginPage {
     }
     else {
       alert("Login Realizado");
+      this.navCtrl.push(HomePage);    
+
     }
   }
 
@@ -74,7 +77,7 @@ export class LoginPage {
       id: "123",
       name: "Carl"
     });
-    console.log('Vá para o Cadastro!');
+    console.log('Vá para o Cadastro!',name);
   }
   
 }

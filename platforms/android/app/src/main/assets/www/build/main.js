@@ -5,10 +5,11 @@ webpackJsonp([2],{
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cadastro_cadastro__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_home__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cadastro_cadastro__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,6 +19,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -36,9 +38,9 @@ var LoginPage = /** @class */ (function () {
         this.regex = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
         //formulario
         this.formularioLogin = formBuilder.group({
-            email: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].maxLength(70), __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].pattern(this.regex), __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required])],
-            password: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].minLength(6), __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].maxLength(20),
-                    __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required])],
+            email: ['', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* Validators */].maxLength(70), __WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* Validators */].pattern(this.regex), __WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* Validators */].required])],
+            password: ['', __WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* Validators */].minLength(6), __WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* Validators */].maxLength(20),
+                    __WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* Validators */].required])],
         });
     }
     LoginPage.prototype.ionViewDidLoad = function () {
@@ -65,22 +67,23 @@ var LoginPage = /** @class */ (function () {
         }
         else {
             alert("Login Realizado");
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__home_home__["a" /* HomePage */]);
         }
     };
     LoginPage.prototype.goCadastro = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__cadastro_cadastro__["a" /* CadastroPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_1__cadastro_cadastro__["a" /* CadastroPage */], {
             id: "123",
             name: "Carl"
         });
-        console.log('Vá para o Cadastro!');
+        console.log('Vá para o Cadastro!', name);
     };
     LoginPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/src/pages/login/login.html"*/'<ion-content padding class="backgroung-grad">\n    <ion-chip>\n        <ion-avatar>\n          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">\n        </ion-avatar>\n        <div style="left: 16px;position: relative;">\n            - CONTROLE FINANCEIRO -\n        </div>\n      </ion-chip>\n  <div class="caixa-login">\n    <form [formGroup]="formularioLogin" (ngSubmit)="onSubmit()">\n      <ion-list>\n        <ion-item>\n          <ion-label floating>E-mail:</ion-label>\n          <ion-input type="text" formControlName="email">\n          </ion-input>\n        </ion-item>\n        <h6 *ngIf="errorEmail" class="error"> {{messageEmail}}</h6>\n        <ion-item>\n          <ion-label floating>Senha:</ion-label>\n          <ion-input type="password" formControlName="password">\n          </ion-input>\n        </ion-item>\n        <h6 *ngIf="errorPassword" class="error"> {{messagePassword}}</h6>\n      </ion-list>\n\n      <div class="row">\n        <div class="col-md-12">\n          <ion-list my-3>\n            <ion-label>Recuperar Senha ? </ion-label>\n          </ion-list>\n        </div>\n      </div>\n      <button ion-button color="orange" block round type="submit">Acessar</button>\n    </form>\n    <button ion-button color="dark" block round (click)="goCadastro()">Cadastrar</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/src/pages/login/login.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["m" /* Component */])({
+            selector: 'page-login',template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/login/login.html"*/'<ion-content padding class="backgroung-grad">\n    <ion-chip>\n        <ion-avatar>\n          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">\n        </ion-avatar>\n        <div style="left: 16px;position: relative;">\n            - CONTROLE FINANCEIRO -\n        </div>\n      </ion-chip>\n  <div class="caixa-login">\n    <form [formGroup]="formularioLogin" (ngSubmit)="onSubmit()">\n      <ion-list>\n        <ion-item>\n          <ion-label floating>E-mail:</ion-label>\n          <ion-input type="text" formControlName="email">\n          </ion-input>\n        </ion-item>\n        <h6 *ngIf="errorEmail" class="error"> {{messageEmail}}</h6>\n        <ion-item>\n          <ion-label floating>Senha:</ion-label>\n          <ion-input type="password" formControlName="password">\n          </ion-input>\n        </ion-item>\n        <h6 *ngIf="errorPassword" class="error"> {{messagePassword}}</h6>\n      </ion-list>\n\n      <div class="row">\n        <div class="col-md-12">\n          <ion-list my-3>\n            <ion-label>Recuperar Senha ? </ion-label>\n          </ion-list>\n        </div>\n      </div>\n      <button ion-button color="orange" block round type="submit">Acessar</button>\n    </form>\n    <button ion-button color="dark" block round (click)="goCadastro()">Cadastrar</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -135,13 +138,56 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 195:
+/***/ 152:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl) {
+        this.navCtrl = navCtrl;
+        this.rootPage = HomePage_1;
+    }
+    HomePage_1 = HomePage;
+    HomePage.prototype.ionViewDidLoad = function () {
+        setInterval(function () {
+            console.log('123');
+        }, 1000);
+    };
+    HomePage = HomePage_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/home/home.html"*/'<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>\n      HOME PAGE \n    </ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n  \n<ion-card>\n  <ion-card-header>\n    Dezembro\n  </ion-card-header>\n  <ion-card-content>\n    <div class="row">\n        <div class="col-md-12">\n            Saldo a receber\n        </div>  \n    </div>\n    <div class="row">\n        <div class="col-md-12">\n            <span> R$0,00</span>\n        </div>  \n    </div>\n    \n      \n  </ion-card-content>\n</ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+    ], HomePage);
+    return HomePage;
+    var HomePage_1;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 196:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(219);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -149,7 +195,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 218:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -157,10 +203,10 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(268);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_cadastro_cadastro__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -221,15 +267,15 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 268:
+/***/ 269:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(100);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -256,7 +302,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -264,41 +310,6 @@ var MyApp = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 269:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  The world is your oyster.\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.\n  </p>\n</ion-content>\n'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/src/pages/home/home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
-    ], HomePage);
-    return HomePage;
-}());
-
-//# sourceMappingURL=home.js.map
 
 /***/ }),
 
@@ -373,7 +384,6 @@ var CadastroPage = /** @class */ (function () {
                 this.messagePassword = "";
             }
             if ((confirmePassword.value != password.value)) {
-                console.log('FUNCIONA');
                 this.errorConfirmePassword = true;
                 this.messageConfirmePassword = "Ops! a senha nao está igual!";
             }
@@ -385,9 +395,12 @@ var CadastroPage = /** @class */ (function () {
             alert("CadasformularioCadastro Realizado");
         }
     };
+    CadastroPage.prototype.voltarPage = function () {
+        this.navCtrl.pop();
+    };
     CadastroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cadastro',template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/src/pages/cadastro/cadastro.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>cadastro</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="backgroung-grad">\n\n    <div class="caixa-login">\n        <form [formGroup]="formularioCadastro" (ngSubmit)="onSubmit()">\n          <ion-list>\n            <ion-item>\n              <ion-label floating>Nome:</ion-label>\n              <ion-input type="text" formControlName="nome">\n              </ion-input>\n            </ion-item>\n            <h6 *ngIf="errorNome" class="error"> {{messageNome}}</h6>\n            <ion-item>\n                <ion-label floating>Sobrenome:</ion-label>\n                <ion-input type="text" formControlName="sobrenome">\n                </ion-input>\n              </ion-item>\n              <h6 *ngIf="errorSobrenome" class="error"> {{messageSobrenome}}</h6>\n              <ion-item>\n                  <ion-label floating>E-mail:</ion-label>\n                  <ion-input type="text" formControlName="email">\n                  </ion-input>\n                </ion-item>\n                <h6 *ngIf="errorEmail" class="error"> {{messageEmail}}</h6>\n                <ion-item>\n                    <ion-label floating>Senha:</ion-label>\n                    <ion-input type="password" formControlName="password">\n                    </ion-input>\n                  </ion-item>\n                  <h6 *ngIf="errorPassword" class="error"> {{messagePassword}}</h6>\n            <ion-item>\n              <ion-label floating>Confirmar Senha:</ion-label>s\n              <ion-input type="password" formControlName="confirmePassword">\n              </ion-input>\n            </ion-item>\n            <h6 *ngIf="errorConfirmePassword" class="error"> {{messageConfirmePassword}}</h6>\n          </ion-list>\n          <button ion-button color="dark" block round type="submit"> Cadastrar</button>\n        </form>\n        <button ion-button color="orange" block outline round> Já Sou Cadastrado</button>\n      </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/src/pages/cadastro/cadastro.html"*/,
+            selector: 'page-cadastro',template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/cadastro/cadastro.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>cadastro</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="backgroung-grad">\n\n    <div class="caixa-login">\n        <form [formGroup]="formularioCadastro" (ngSubmit)="onSubmit()">\n          <ion-list>\n            <ion-item>\n              <ion-label floating>Nome:</ion-label>\n              <ion-input type="text" formControlName="nome">\n              </ion-input>\n            </ion-item>\n            <h6 *ngIf="errorNome" class="error"> {{messageNome}}</h6>\n            <ion-item>\n                <ion-label floating>Sobrenome:</ion-label>\n                <ion-input type="text" formControlName="sobrenome">\n                </ion-input>\n              </ion-item>\n              <h6 *ngIf="errorSobrenome" class="error"> {{messageSobrenome}}</h6>\n              <ion-item>\n                  <ion-label floating>E-mail:</ion-label>\n                  <ion-input type="text" formControlName="email">\n                  </ion-input>\n                </ion-item>\n                <h6 *ngIf="errorEmail" class="error"> {{messageEmail}}</h6>\n                <ion-item>\n                    <ion-label floating>Senha:</ion-label>\n                    <ion-input type="password" formControlName="password">\n                    </ion-input>\n                  </ion-item>\n                  <h6 *ngIf="errorPassword" class="error"> {{messagePassword}}</h6>\n            <ion-item>\n              <ion-label floating>Confirmar Senha:</ion-label>s\n              <ion-input type="password" formControlName="confirmePassword">\n              </ion-input>\n            </ion-item>\n            <h6 *ngIf="errorConfirmePassword" class="error"> {{messageConfirmePassword}}</h6>\n          </ion-list>\n          <button ion-button color="dark" block round type="submit"> Cadastrar</button>\n        </form>\n        <button ion-button color="orange" block outline round (click)="voltarPage()" > Já Sou Cadastrado</button>\n      </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/cadastro/cadastro.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
@@ -400,5 +413,5 @@ var CadastroPage = /** @class */ (function () {
 
 /***/ })
 
-},[195]);
+},[196]);
 //# sourceMappingURL=main.js.map

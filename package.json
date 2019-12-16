@@ -25,6 +25,8 @@
     "@ionic-native/status-bar": "~4.20.0",
     "@ionic/storage": "2.2.0",
     "angularfire2": "^5.2.1",
+    "bootstrap": "^4.4.1",
+    "bootstrap-select": "^1.13.12",
     "cordova-android": "^8.1.0",
     "ionic-angular": "3.9.5",
     "ionicons": "3.0.0",

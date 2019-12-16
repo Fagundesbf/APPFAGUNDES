@@ -7,8 +7,22 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  public rootPage: any = HomePage;
+
   constructor(public navCtrl: NavController) {
 
+
+    
+    
+
   }
+  ionViewDidLoad(){
+    setInterval(()=>{
+      console.log('123')
+    },1000); 
+  }
+
+
+
 
 }

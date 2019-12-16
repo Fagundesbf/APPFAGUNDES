@@ -77,7 +77,6 @@ export class CadastroPage {
       }
       if ((confirmePassword.value!=password.value)) {
       
-          console.log('FUNCIONA');
           this.errorConfirmePassword = true;
           this.messageConfirmePassword = "Ops! a senha nao está igual!"
       }
@@ -90,5 +89,10 @@ export class CadastroPage {
       alert("CadasformularioCadastro Realizado");
     }
   }
+
+  voltarPage(){
+    this.navCtrl.pop();
+  }
+
 
 }

@@ -9,6 +9,8 @@ export class HomePage {
 
   public rootPage: any = HomePage;
 
+  ocultados = false;
+
   constructor(public navCtrl: NavController) {
 
 
@@ -23,6 +25,13 @@ export class HomePage {
   }
 
 
-
+  ocultaValores(){
+    console.log('ocultados');
+    this.ocultados = true;
+  }
+  exibeValores(){
+    console.log('exibidos');
+    this.ocultados = false;  
+  }
 
 }

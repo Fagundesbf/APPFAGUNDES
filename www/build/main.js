@@ -160,6 +160,7 @@ var HomePage = /** @class */ (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
         this.rootPage = HomePage_1;
+        this.ocultados = false;
     }
     HomePage_1 = HomePage;
     HomePage.prototype.ionViewDidLoad = function () {
@@ -167,14 +168,22 @@ var HomePage = /** @class */ (function () {
             console.log('123');
         }, 1000);
     };
+    HomePage.prototype.ocultaValores = function () {
+        console.log('ocultados');
+        this.ocultados = true;
+    };
+    HomePage.prototype.exibeValores = function () {
+        console.log('exibidos');
+        this.ocultados = false;
+    };
     HomePage = HomePage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/home/home.html"*/'<ion-content padding>\n<ion-card>\n  <ion-card-header>\n    Dezembro\n  </ion-card-header>\n  <ion-card-content>\n            <div class="texto-center"> Saldo a receber</div>\n        <div>\n          <h1 class="texto-center"> R$0,00</h1>\n        </div>\n        <div class="texto-center">\n            <ion-icon name="ios-eye-outline"></ion-icon>\n        </div>\n        <div class="row"> \n          <ion-icon name="time"></ion-icon>\n          <div class="col-md-12 padding-esquerda padding-direita">\n                <div>\n                 Horas Atuadas\n              </div>\n              <div>\n                00:02:01\n              </div>\n            </div>\n            <ion-icon name="ios-eye-outline"></ion-icon>\n            \n            <div class="col-md-12 padding-esquerda ">\n           \n           \n                <label>\n                 Horas Atuadas\n              </label>\n              <div>\n                00:02:01\n              </div>\n            </div>\n        </div>\n\n    \n  </ion-card-content>\n</ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/home/home.html"*/'<ion-content padding>\n<ion-card>\n  <ion-card-header>\n    Dezembro\n  </ion-card-header>\n  <ion-card-content>\n            <div class="texto-center"> Saldo a receber</div>\n        <div>\n          <h1 class="texto-center" [ngClass]="{\'ocultado\':ocultados === true}"> R$0,00</h1>\n        </div>\n        <div class="texto-center" *ngIf="!ocultados">\n            <ion-icon name="ios-eye-outline" (click)="ocultaValores()"></ion-icon>\n        </div>\n        <div class="texto-center" *ngIf="ocultados">\n            <ion-icon name="ios-eye-off-outline" (click)="exibeValores()"></ion-icon>\n\n        </div>\n        <ion-grid>\n          \n          <ion-row> \n            <ion-col col-12 col-md-12 col-sm-12 col-xs-12>\n              <ion-row>\n                 <ion-col col-6 col-md-6 col-sm-6 col-xs-6  style="padding: 0px;">\n                  <ion-row>\n                      <ion-col col-3 col-md-3 col-sm-3 col-xs-3 style="padding: 5px 0px;">\n                          <ion-icon name="ios-time-outline" class="verde"></ion-icon>\n                      </ion-col>\n                      <ion-col col-9 col-md-9 col-sm-9 col-xs-9 >\n                        <ion-row>\n                          <ion-col col-12 col-md-12 col-sm-12 col-xs-12 style="padding:0px">\n                              <label>\n                                  Hora\n                              </label>\n                          </ion-col>\n                            <ion-col col-12 col-md-12 col-sm-12 col-xs-12 style="padding:0px" >\n                                <label class="verde">\n                                    00:02:01\n                                  </label>\n                            </ion-col>\n                        </ion-row>\n                      </ion-col>\n                  </ion-row>\n                 </ion-col>\n\n                 <ion-col col-6 col-md-6 col-sm-6 col-xs-6  style="padding: 0px;">\n                    <ion-row>\n                        <ion-col col-3 col-md-3 col-sm-3 col-xs-3 style="padding: 5px 0px;">\n                            <ion-icon name="time"></ion-icon>\n                        </ion-col>\n                        <ion-col col-9 col-md-9 col-sm-9 col-xs-9 >\n                          <ion-row>\n                            <ion-col col-12 col-md-12 col-sm-12 col-xs-12 style="padding:0px">\n                                <label>\n                                    Horas\n                                </label>\n                            </ion-col>\n                              <ion-col col-12 col-md-12 col-sm-12 col-xs-12 style="padding:0px">\n                                  <label>\n                                      00:02:01\n                                    </label>\n                              </ion-col>\n                          </ion-row>\n                        </ion-col>\n                    </ion-row>\n                   </ion-col>\n              </ion-row>  \n            </ion-col>\n          </ion-row>\n        </ion-grid>\n        \n\n    \n  </ion-card-content>\n</ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/home/fabio/PROJETOS/Apontamento/APPFAGUNDES/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
     ], HomePage);
     return HomePage;
-    var HomePage_1;
+    var HomePage_1, _a;
 }());
 
 //# sourceMappingURL=home.js.map

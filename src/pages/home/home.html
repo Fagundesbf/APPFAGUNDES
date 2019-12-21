@@ -6,34 +6,68 @@
   <ion-card-content>
             <div class="texto-center"> Saldo a receber</div>
         <div>
-          <h1 class="texto-center"> R$0,00</h1>
+          <h1 class="texto-center" [ngClass]="{'ocultado':ocultados === true}"> R$0,00</h1>
         </div>
-        <div class="texto-center">
-            <ion-icon name="ios-eye-outline"></ion-icon>
+        <div class="texto-center" *ngIf="!ocultados">
+            <ion-icon name="ios-eye-outline" (click)="ocultaValores()"></ion-icon>
         </div>
-        <div class="row"> 
-          <ion-icon name="time"></ion-icon>
-          <div class="col-md-12 padding-esquerda padding-direita">
-                <div>
-                 Horas Atuadas
-              </div>
-              <div>
-                00:02:01
-              </div>
-            </div>
-            <ion-icon name="ios-eye-outline"></ion-icon>
-            
-            <div class="col-md-12 padding-esquerda ">
-           
-           
-                <label>
-                 Horas Atuadas
-              </label>
-              <div>
-                00:02:01
-              </div>
-            </div>
+        <div class="texto-center" *ngIf="ocultados">
+            <ion-icon name="ios-eye-off-outline" (click)="exibeValores()"></ion-icon>
+
         </div>
+        <ion-grid>
+          
+          <ion-row> 
+            <ion-col col-12 col-md-12 col-sm-12 col-xs-12>
+              <ion-row>
+                 <ion-col col-6 col-md-6 col-sm-6 col-xs-6  style="padding: 0px;">
+                  <ion-row>
+                      <ion-col col-3 col-md-3 col-sm-3 col-xs-3 style="padding: 5px 0px;">
+                          <ion-icon name="ios-time-outline" class="verde"></ion-icon>
+                      </ion-col>
+                      <ion-col col-9 col-md-9 col-sm-9 col-xs-9 >
+                        <ion-row>
+                          <ion-col col-12 col-md-12 col-sm-12 col-xs-12 style="padding:0px">
+                              <label>
+                                  Hora
+                              </label>
+                          </ion-col>
+                            <ion-col col-12 col-md-12 col-sm-12 col-xs-12 style="padding:0px" >
+                                <label class="verde">
+                                    00:02:01
+                                  </label>
+                            </ion-col>
+                        </ion-row>
+                      </ion-col>
+                  </ion-row>
+                 </ion-col>
+
+                 <ion-col col-6 col-md-6 col-sm-6 col-xs-6  style="padding: 0px;">
+                    <ion-row>
+                        <ion-col col-3 col-md-3 col-sm-3 col-xs-3 style="padding: 5px 0px;">
+                            <ion-icon name="time"></ion-icon>
+                        </ion-col>
+                        <ion-col col-9 col-md-9 col-sm-9 col-xs-9 >
+                          <ion-row>
+                            <ion-col col-12 col-md-12 col-sm-12 col-xs-12 style="padding:0px">
+                                <label>
+                                    Horas
+                                </label>
+                            </ion-col>
+                              <ion-col col-12 col-md-12 col-sm-12 col-xs-12 style="padding:0px">
+                                  <label>
+                                      00:02:01
+                                    </label>
+                              </ion-col>
+                          </ion-row>
+                        </ion-col>
+                    </ion-row>
+                   </ion-col>
+              </ion-row>  
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
 
     
   </ion-card-content>

@@ -28076,3 +28076,12 @@ page-home .padding-esquerda {
 page-home .padding-direita {
   padding-right: 18px;
 }
+
+page-home .verde {
+  color: #29d429;
+}
+
+page-home .ocultado {
+  border-radius: 49px;
+  background: #222222;
+}
